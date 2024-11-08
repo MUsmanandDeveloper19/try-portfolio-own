@@ -1,0 +1,761 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000203;
+}
+
+.first-bar{
+ width: 100%;
+ height: 40px;
+border: 1px solid none;
+justify-content: space-between;
+background-color: #023B6D;
+}
+.fade-m-usman{
+  animation: 2s color-fade linear infinite alternate;
+  padding-top: 4.5px;
+  color: white;
+}
+@keyframes color-fade{
+    from{
+        color: white;
+        transition: all 34s;
+        text-align: center;
+    }
+    to{
+        color: #023B6D;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1440px) {
+  .fade-m-usman{
+   margin-left: 50px;
+  } 
+}
+@media screen and (max-width: 483px) {
+  .fade-m-usman{
+    font-size: 19px;
+    margin-right: -20px;
+    margin-top: 3px;
+  } 
+}
+@media screen and (max-width: 398px) {
+  .fade-m-usman{
+    font-size: 18px;
+    margin-right: -20px;
+    margin-top: 3px;
+  } 
+}
+@media screen and (max-width: 386px) {
+  .fade-m-usman{
+    font-size: 16px;
+    margin-right: -20px;
+    margin-top: 3px;
+  } 
+}
+@media screen and (max-width: 360px) {
+  .fade-m-usman{
+    font-size: 15px;
+    margin-right: -20px;
+    margin-top: 7px;
+  } 
+}
+@media screen and (max-width: 347px) {
+  .fade-m-usman{
+    font-size: 14px;
+    margin-right: -20px;
+    margin-top: 7px;
+  } 
+}
+@media screen and (max-width: 398px) {
+  .fade-m-usman{
+    font-size: 13px;
+    margin-right: -20px;
+    margin-top: 7px;
+  } 
+}
+@media screen and (max-width: 321px) {
+  .fade-m-usman{
+    font-size: 13px;
+    margin-right: -20px;
+    margin-top: 7px;
+  } 
+}
+@media screen and (max-width: 320px) {
+  .fade-m-usman{
+    font-size: 13px;
+    margin-right: -20px;
+    margin-top: 7px;
+  } 
+}
+.nav-font-color-change{
+  color: #023B6D;
+}
+#burger-menu-span{
+  margin-top: -3px;
+}
+#burger-menu{
+  font-size: 23px;
+}
+@media screen and (max-width: 398px) {
+  #burger-menu{
+    font-size: 17px;
+  } 
+}
+
+.menu {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  width: fit-content;
+  display: flex;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.menu .link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 36px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a3cff;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link svg {
+  width: 14px;
+  height: 14px;
+  fill: #000000;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .item {
+  position: relative;
+}
+
+.menu .item .submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  border-radius: 0 0 16px 16px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+  pointer-events: none;
+  list-style: none;
+}
+
+.menu .item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  border-top: transparent;
+  border-color: #0a3cff;
+}
+
+.menu .item:hover .link {
+  color: #ffffff;
+  border-radius: 16px 16px 0 0;
+}
+
+.menu .item:hover .link::after {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.menu .item:hover .link svg {
+  fill: #ffffff;
+  transform: rotate(-180deg);
+}
+
+.submenu .submenu-item {
+  width: 100%;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-item:last-child .submenu-link {
+  border-bottom: none;
+}
+
+.submenu .submenu-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  width: 100%;
+  height: 100%;
+  background-color: #3340f198;
+  z-index: -1;
+  transform-origin: left;
+  transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.submenu .submenu-link:hover {
+  color: #ffffff;
+}
+
+/* container-about */
+ #container-about{
+  background-color: #040f1d;
+ }
+/* container-about */
+#container-about-img{
+  width: 125px;
+  height: 125px;
+  border: 8px solid gray;
+  border-radius: 50%;
+}
+#container-about-img-set{
+  width: 125px;
+  height: 109px;
+  border-radius: 50%;
+}
+
+/* scroll-bar-style */
+html,body{
+  width: auto;
+  height: auto;
+}
+div{
+  height: auto;
+
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(225, 255, 255);
+  border-radius: 12px;
+  transition: all 34s;
+}
+::-webkit-scrollbar-thumb{
+border-radius: 5px;
+  background-color: #023B6D;
+}
+/* scroll-bar-style */
+
+/* About-social-media-icon */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2d2e32;
+  border: 2px solid #2d2e32;
+  transition: all 0.45s;
+}
+
+.button:hover {
+  transform: rotate(360deg);
+  transform-origin: center center;
+  background-color: #ffff;
+  color: #2d2e32;
+}
+
+.button:hover .btn-svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg)
+    brightness(103%) contrast(103%);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* About-social-media-icon */
+/* whatsapp-on-click */
+ .whatsapp-on-click{
+  width: 41px;
+  height: 41px;
+  border: 1px solid rgb(32, 39, 39);
+  border-radius: 50%;
+  background-color: rgb(32, 39, 39);
+  cursor: pointer;
+  transition: transform 0.6s ease;
+ }
+ .whatsapp-on-click:hover{
+  transform: rotate(360deg); 
+  transition: all 34s;
+ }
+/* whatsapp-on-click */
+
+/* container-down-video */
+.container-down-video{
+  height: 250px;
+}
+/* container-down-video */
+
+/* pages-icons */
+#page-icon{
+  font-size: 20px;
+  color: #315799;
+}
+/* pages-icon */
+
+#pages-font-style{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.about-down-line{
+  width: 100px;
+  height: 2px;
+  border: 1px solid gold;
+  background-color: gold;
+  animation:  about-down-line 2s linear infinite alternate;
+}
+@keyframes about-down-line {
+  from{
+    width: 100px;
+    transition: all 34s;
+  }
+  to{
+    width: 20px;
+    transition: all 34s;
+  }
+}
+
+/* about-front-mern-css */
+.wrapper {
+  display: flex;
+  justify-content: flex-start; /* Align text at the top */
+  align-items: flex-start;
+  background-color: inherit;
+  padding-top: 10px;
+  height: auto;
+}
+
+.text-container {
+  font-size: 4vw; /* Use viewport width for responsiveness */
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.dynamic-text {
+  color: rgb(255, 255, 255); /* Text color is white */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  border-right: 2px solid rgb(201, 49, 49);
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: all 1s ease; /* Smooth transition */
+  animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; transition: all 34s;}
+  to { width: 100%; transition: all 34s;}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(190, 71, 71); }
+}
+
+.fade-out {
+  animation: fadeOut 2s forwards;
+  transition: all 34s;
+}
+
+@keyframes fadeOut {
+  from { width: 100%; transition: all 34s; }
+  to { width: 0; transition: all 34s; }
+}
+
+/* Media queries to ensure the text remains responsive on smaller devices */
+@media (max-width: 1200px) {
+  .text-container {
+    font-size: 3vw; /* Slightly smaller text for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    font-size: 5vw; /* Larger text for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-container {
+    font-size: 6vw; /* Even larger text for very small screens */
+  }
+}
+/* about-front-mern-css */
+
+/* arraws-about */
+#arraws-about{
+  font-size: 26px;
+  margin-top: 3px;
+  color: gold;
+}
+/* arraws-about */
+
+/* about-contant */
+ #about-contant{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+ }
+/* about-contant */
+
+/* SKills-section */
+/* From Uiverse.io by Juanes200122 */ 
+.skills-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  /* background: #282828; */
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.container .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(226, 226, 226);
+}
+
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: rgba(236, 236, 236, 0.1);
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: rgb(226, 226, 226);
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-per.html {
+  /*progreso de las diferentes lenguajes*/
+  width: 70%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.scss {
+  /*progreso de las diferentes lenguajes*/
+  width: 80%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.Boostrap {
+  /*progreso de las diferentes lenguajes*/
+  width: 85%;
+  animation-delay: 0.2s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 9px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgb(226, 226, 226);
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: rgb(226, 226, 226);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* SKills-section */
+
+
+/* SKills-section */
+/* From Uiverse.io by Juanes200122 */ 
+.skills-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  /* background: #282828; */
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.container .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(226, 226, 226);
+}
+
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: rgba(236, 236, 236, 0.1);
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: rgb(226, 226, 226);
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-per.JavaScript {
+  /*progreso de las diferentes lenguajes*/
+  width: 50%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.jquery {
+  /*progreso de las diferentes lenguajes*/
+  width: 45%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.Node-js {
+  /*progreso de las diferentes lenguajes*/
+  width: 50%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.React {
+  /*progreso de las diferentes lenguajes*/
+  width: 45%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.MongoDB {
+  /*progreso de las diferentes lenguajes*/
+  width: 30%;
+  animation-delay: 0.2s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 9px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgb(226, 226, 226);
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: rgb(226, 226, 226);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* SKills-section */
+
+/* happy-client-section-icon-size */
+#happy-client-section-icon-size{
+  font-size: 40px;
+  text-align: center;
+  margin-left: 3px;
+}
+/* happy-client-section-icon-size */
+
+/* happy-client-section-h5-tag-size */
+#happy-client-section-h5-tag-size{
+  font-weight: 100;
+}
+/* happy-client-section-h5-tag-size */
+
+/* resume-section */
+ 
+ /* ball-div */
+#ball-div{
+  width: 20px; 
+  height: 20px;
+  border: 3px solid gold; 
+  border-radius: 50%; 
+}
+#ball-div-line{
+  border-left: 2px solid gold;
+}
+ /* ball-div */
+
+/* resume-section */
+
+/* projects-section */
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+/* overfloy */
+.card {
+  position: relative;
+  width: auto; /* Set the width of the card */
+  height: auto; /* Set the height of the card */
+  overflow: hidden; /* Hide overflowing content by default */
+  border-radius: 12px;
+  border: 1px solid black;
+}
+.card img {
+  width: 100%; /* Make the image fill the entire card */
+  height: 100%; /* Make the image fill the entire card */
+  object-fit: cover; /* Ensure the image covers the card without stretching */
+}
+.overflow-content {
+  position: absolute;
+  bottom: -100%; /* Initially, place the overflow content outside the card */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.329); /* Semi-transparent background */
+  padding: 20px;
+  transition: bottom 0.3s ease; /* Add transition for smooth effect */
+}
+.card:hover .overflow-content {
+  bottom: 0; /* Move the overflow content up into the card when hovering */
+}
+#overflow-hover-radius-div{
+  border-radius: 50%;
+}
+/* overfloy */
+
+/* projects-section */
